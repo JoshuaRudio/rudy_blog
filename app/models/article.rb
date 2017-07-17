@@ -4,6 +4,8 @@ class Article < ApplicationRecord
   has_many :tags, through: :taggings
 
   def tag_list
-    tags.join(", ")
+    self.tags.collect do |tag|
+      tag.name
+    end.join(", ")
   end
 end
