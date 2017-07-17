@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
   end
-  resource :tags
+  resources :tags
 
 end
